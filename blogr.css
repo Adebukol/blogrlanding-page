@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* - Light red (CTA text): hsl(356, 100%, 66%)
+- Very light red (CTA hover background): hsl(355, 100%, 74%)
+- Very dark blue (headings): hsl(208, 49%, 24%)
+
+### Neutral
+
+- White (text): hsl(0, 0%, 100%)
+- Grayish blue (footer text): hsl(240, 2%, 79%)
+- Very dark grayish blue (body copy): hsl(207, 13%, 34%)
+- Very dark black blue (footer background): 
+
+### Gradienthsl(240, 10%, 16%)
+
+Background gradient - Intro/CTA mobile nav:
+
+- Very light red: hsl(13, 100%, 72%)
+- Light red: hsl(353, 100%, 62%)
+
+Background gradient - body:
+
+- Very dark gray blue: hsl(237, 17%, 21%)
+- Very dark desaturated blue: hsl(237, 23%, 32%)
+ */
+.container{
+  width: 100%;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+footer{
+  background: hsl(240, 10%, 16%);
+  border-top-right-radius: 100px;
+  padding: 50px 400px 50px 100px;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  color: hsl(240, 2%, 79%);
+}
+.item h4{
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.item a{
+  font-size: 11px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: hsl(240, 2%, 79%);
+}
+.attribution { 
+  font-size: 12px; 
+  text-align: center; 
+  margin-top: 30px;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a { 
+  color: hsl(0, 0%, 100%); 
+}
