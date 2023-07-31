@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -27,7 +30,8 @@ Background gradient - body:
 - Very dark desaturated blue: hsl(237, 23%, 32%)
  */
  body{
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Overpass', sans-serif;
  }
 .container{
   width: 100%;
@@ -43,10 +47,22 @@ header{
   border-bottom-left-radius: 100px;
   background-color: hsl(355, 100%, 74%);
 }
+hr{
+  display: none;
+}
+.container-1{
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  padding: 50px 100px;
+}
 nav {
   display: flex;
-  padding: 50px 100px;
   align-items: center;
+  justify-content: flex-end;
+}
+.mobile-arrow{
+  display: none;
 }
 .dropdown{
   display: none;
@@ -54,9 +70,13 @@ nav {
 .menu{
   display: none;
 }
+.logo{
+  margin-right: 30px;
+}
 nav ul li{
   display: inline-block;
-  margin-left: 30px;
+  margin-right: 20px;
+  justify-content: flex-start;
   cursor: pointer;
 }
 nav li a{
@@ -68,10 +88,10 @@ nav a{
   margin-right: 5px;
 }
 .flex-end{
-  margin-left: auto;
+  margin-left: 620px;
 }
 .btn{
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 25px;
   border: none;
   background-color: hsl(0, 0%, 100%);
@@ -88,10 +108,6 @@ nav a{
   font-weight: 700;
 }
 
-.logo{
-  width: 80px;
-  height: 30px;
-}
 .heading{
   margin-top: 100px;
   margin-bottom: 30px;
@@ -117,14 +133,14 @@ nav a{
   margin-left: 20px;
 }
 .start:hover{
-background: transparent;
-border: 2px solid hsl(355, 100%, 74%);
+background: hsl(355, 100%, 74%);
+border: 1px solid hsl(0, 0%, 100%);
 cursor: pointer;
 color: hsl(0, 0%, 100%);
 }
 .learn{
   background: transparent;
-border: 2px solid hsl(355, 100%, 74%);
+border: 2px solid hsl(0, 0%, 100%);
 color: hsl(0, 0%, 100%);
 }
 .learn:hover{
@@ -256,11 +272,79 @@ footer{
   
 
 @media screen and (max-width: 800px) {
-  .menu{
+  .container-1{
+    padding: 40px 20px;
     display: block;
   }
-  nav ul li{
+  .menu{
+    display: block;
+    
+  }
+  .lg-arrow{
     display: none;
+  }
+  .mobile-arrow{
+    display: block;
+    margin-right: 0px;
+  }
+  .logo{
+    margin:0px 120px 0px 0px;
+    height: 30px;
+    width: 80px;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    background: hsl(0, 0%, 100%);
+    min-width: 100%;
+    margin: auto;
+    z-index: 1;  
+    /* padding: 20px 40px; */
+  }
+  .flex-end{display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+  .login{
+    margin: 0px;
+  }
+  .sign-up{
+    margin: 0px;
+  }
+   
+    hr{
+      display: block;
+    }
+  
+  nav ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  /* nav ul li a{
+    margin-bottom: 20px;
+    display: block;
+    margin: 0px;
+    display: flex;
+  } */
+    /* margin: auto; */
+  nav a{
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(208, 49%, 24%);
+    margin-left: 0px;
   }
   .row{
     flex-direction: column;
@@ -268,9 +352,7 @@ footer{
   .cta{
     flex-direction: row;
   }
-  .flex-end{
-    display: none;
-  }
+  
   .reverse{
     flex-direction: column-reverse;
   }
@@ -327,7 +409,7 @@ footer{
     background-position:top -600px left -350px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    height: 100vh;
+    min-height: 100vh;
     margin-bottom: 50px;
   }
   .phones{
@@ -365,7 +447,7 @@ footer{
   /* ------------main-end */
   footer{
     text-align: center;
-    padding: 50px;
+    padding: 50px 0px;
   }
   
   .row.footer{
