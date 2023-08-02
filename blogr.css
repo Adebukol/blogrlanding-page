@@ -53,13 +53,13 @@ hr{
 .container-1{
   display: flex;
   align-items: center; 
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   padding: 50px 100px;
 }
-nav {
-  display: flex;
+ nav {
+  flex: 1;
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
 }
 .mobile-arrow{
   display: none;
@@ -72,7 +72,9 @@ nav {
 }
 .logo{
   margin-right: 30px;
+  flex: 2;
 }
+
 nav ul li{
   display: inline-block;
   margin-right: 20px;
@@ -88,7 +90,9 @@ nav a{
   margin-right: 5px;
 }
 .flex-end{
-  margin-left: 620px;
+  margin-left: 40em;
+  /* justify-content:flex-end ;
+  margin-right: -0%; */
 }
 .btn{
   padding: 12px 20px;
@@ -286,6 +290,7 @@ footer{
   .mobile-arrow{
     display: block;
     margin-right: 0px;
+    margin-left: 3px;
   }
   .logo{
     margin:0px 120px 0px 0px;
@@ -297,54 +302,82 @@ footer{
     justify-content: space-between;
     align-items: center;
   }
+  .menu{
+    margin-left: auto;
+  }
+  /* #navlinks{
+    
+  } */
   nav{
-    display: flex;
+    display: none;
+    padding: 30px 20px;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 150px;
+    justify-content: space-between;
+    top: 120px;
+    left: 0;
     background: hsl(0, 0%, 100%);
-    min-width: 100%;
-    margin: auto;
+    width: 90%;
+    max-height: 100%;
+    margin: auto 20px;
     z-index: 1;  
-    /* padding: 20px 40px; */
+    border-radius: 8px;
+    overflow: hidden;
   }
-  .flex-end{display: flex;
+  .flex-end{
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
+    padding: 0px;
     margin: 0px;
   }
   .login{
-    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .sign-up{
     margin: 0px;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(hsl(355, 100%, 74%),hsl(356, 100%, 66%));
   }
-   
+  .sign-up:hover{
+    color: hsl(356, 100%, 66%)
+  }
     hr{
+      border: 1px solid hsl(240, 16%, 89%);
+      margin-top: 30px;
       display: block;
+      width: 100%;
     }
   
-  nav ul li {
+  nav ul li{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-top: 20px;
+    /* text-align: center; */
+    margin-bottom: 25px;
+    margin-right: 0px;
   }
-  /* nav ul li a{
-    margin-bottom: 20px;
-    display: block;
-    margin: 0px;
-    display: flex;
-  } */
-    /* margin: auto; */
   nav a{
-    margin-left: 5px;
-    font-size: 12px;
+    margin-right: 0px;
+    font-size: 16px;
     font-weight: 700;
     color: hsl(208, 49%, 24%);
-    margin-left: 0px;
+  }
+  .dropdown{
+    min-width: 100%;
+    background: hsl(240, 2%, 79%);
+    color:hsl(0, 0%, 100%);
+    display: none;
+    padding: 20px 100px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .dropdown li a{
+    font-size: 16px;
+ 
   }
   .row{
     flex-direction: column;
@@ -362,20 +395,15 @@ footer{
   header{
     background-image: url('images/bg-pattern-intro-mobile.svg');
     top:0;
-    height: 100vh;
+    height: 60vh;
     margin-bottom: 100px;
   }
-  nav{
-    padding: 40px 20px;
-  }
-  .menu{
-    margin-left: auto;
-  }
+ 
   .heading{
-    font-size: 40px;
-    margin-top: 40px;
+    font-size: 35px;
+    margin-top: 20px;
     margin-bottom: 0px;
-    padding: 40px;
+    padding: 20px;
     line-height: 3rem;
   }
   /* ----------main--------- */
@@ -403,14 +431,15 @@ footer{
   .text p{
     line-height: 2rem;
     padding: 0px 10px;
-    margin-bottom: 120px;
+    margin-bottom: 30px;
   }
   .row.navy-bg{
     background-position:top -600px left -350px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    min-height: 100vh;
+    min-height: 70vh;
     margin-bottom: 50px;
+    margin-top: 150px;
   }
   .phones{
     width: 100%;
@@ -463,4 +492,9 @@ footer{
   .item{
     margin-bottom: 30px;
   }
+}
+@media (min-width:768px) and (max-width: 800px){
+.row.navy-bg {
+    min-height: 100vh;
+}
 }
