@@ -70,6 +70,9 @@ hr{
 .menu{
   display: none;
 }
+#closeMenu{
+  display: none;
+}
 .logo{
   margin-right: 30px;
   flex: 2;
@@ -303,6 +306,10 @@ footer{
     align-items: center;
   }
   .menu{
+    margin-left: auto;
+  }
+  #closeMenu{
+    display: none;
     margin-left: auto;
   }
   /* #navlinks{
