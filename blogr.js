@@ -1,9 +1,8 @@
-const dropDown= document.querySelectorAll('.dropdown');
+const subMenu= document.querySelectorAll('.dropdown');
 const viewLinks= document.getElementById('menuBar');
-console.log(viewLinks);
 const navLinks = document.getElementById('navlinks');
-console.log(navLinks);
 const menuClose =document.getElementById('closeMenu')
+const links = document.getElementsByClassName('links')
 
 
 
@@ -24,10 +23,18 @@ function myFunction() {
   // 
 }
 menuClose.onclick= function(){
-viewLinks.style.display="block"; 
+  navLinks.style.display="none";
+viewLinks.style.display="block";
+
 menuClose.style.display="none"; 
-//navLinks.style.display="none";
+
 }
-document.querySelector('.links').onclick = function(){
-  dropDown.style.display = "block"
+
+function dropDown(){
+  console.log("clicked")
+//   if(subMenu.style.display= "none"){
+
+  
+//   subMenu.style.display = "block"
+// }
 }

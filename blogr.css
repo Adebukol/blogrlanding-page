@@ -330,7 +330,7 @@ footer{
     margin: auto 20px;
     z-index: 1;  
     border-radius: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .flex-end{
     display: flex;
@@ -377,7 +377,7 @@ footer{
     min-width: 100%;
     background: hsl(240, 2%, 79%);
     color:hsl(0, 0%, 100%);
-    display: none;
+    visibility: hidden;;
     padding: 20px 100px;
     border-radius: 8px;
     margin-bottom: 20px;
