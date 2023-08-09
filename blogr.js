@@ -1,4 +1,5 @@
-const subMenu= document.querySelectorAll('.dropdown');
+const subMenu= document.querySelector('.dropdown');
+console.log(subMenu);
 const viewLinks= document.getElementById('menuBar');
 const navLinks = document.getElementById('navlinks');
 const menuClose =document.getElementById('closeMenu')
@@ -7,6 +8,7 @@ const links = document.getElementsByClassName('links')
 
 
 function myFunction() {
+  
   navLinks.style.display="block";
   menuClose.style.display="block";
   viewLinks.style.display="none";
@@ -25,13 +27,15 @@ function myFunction() {
 menuClose.onclick= function(){
   navLinks.style.display="none";
 viewLinks.style.display="block";
-
+subMenu.style.display = "block"
 menuClose.style.display="none"; 
 
 }
 
 function dropDown(){
-  console.log("clicked")
+  // navLinks.style.display = "block";
+  // subMenu.style.display = "block";
+  console.log("clicked");
 //   if(subMenu.style.display= "none"){
 
   
