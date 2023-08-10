@@ -1,4 +1,7 @@
-const subMenu= document.querySelector('.dropdown');
+const subMenu= document.querySelector('.product');
+const subMenu1= document.querySelector('.company');
+console.log(subMenu1);
+const subMenu2= document.querySelector('.connect');
 console.log(subMenu);
 const viewLinks= document.getElementById('menuBar');
 const navLinks = document.getElementById('navlinks');
@@ -12,18 +15,8 @@ function myFunction() {
   navLinks.style.display="block";
   menuClose.style.display="block";
   viewLinks.style.display="none";
-  // if(document.getElementById('navlinks').style.display="block"){
-    
-  //    navLinks.style.display="none";
-  // }
-//  
-// console.log(viewLinks);
-// const navLinks = document.getElementById('navlinks');
-// console.log(navLinks);
-
-  // console.log("clicked");
-  // 
 }
+
 menuClose.onclick= function(){
   navLinks.style.display="none";
 viewLinks.style.display="block";
@@ -32,13 +25,21 @@ menuClose.style.display="none";
 
 }
 
-function dropDown(){
-  // navLinks.style.display = "block";
-  // subMenu.style.display = "block";
-  console.log("clicked");
-//   if(subMenu.style.display= "none"){
-
+function product(){
+  subMenu.style.display = "block";
+  subMenu1.style.display = "none";
+  subMenu2.style.display = "none";
   
-//   subMenu.style.display = "block"
-// }
-}
+  }
+  function company(){
+    subMenu1.style.display = "block";
+    subMenu.style.display = "none";
+  subMenu2.style.display = "none";
+    
+    }
+    function connect(){
+      subMenu2.style.display = "block";
+      subMenu1.style.display = "none";
+  subMenu.style.display = "none";
+      
+      }
