@@ -6,8 +6,9 @@ console.log(subMenu);
 const viewLinks= document.getElementById('menuBar');
 const navLinks = document.getElementById('navlinks');
 const menuClose =document.getElementById('closeMenu')
-const links = document.getElementsByClassName('links')
-
+const links = document.getElementsByClassName('links');
+const arrowBtn = document.querySelector('.lg-arrow');
+const darkBtn = document.querySelector('.mobile-arrow');
 
 
 function myFunction() {
@@ -26,20 +27,43 @@ menuClose.style.display="none";
 }
 
 function product(){
-  subMenu.style.display = "block";
-  subMenu1.style.display = "none";
+  if(subMenu.style.display === "none"){
+    subMenu.style.display ="block";
+    subMenu1.style.display = "none";
   subMenu2.style.display = "none";
+  arrowBtn.classList.toggle('rotate');
+  darkBtn.classList.toggle('rotate');
   
   }
+  else{
+    subMenu.style.display ="none";
+  }
+  }
   function company(){
-    subMenu1.style.display = "block";
-    subMenu.style.display = "none";
-  subMenu2.style.display = "none";
+    if(subMenu1.style.display === "none"){
+      subMenu1.style.display ="block";
+      subMenu.style.display = "none";
+    subMenu2.style.display = "none";
+    arrowBtn.classList.toggle('rotate');
+    darkBtn.classList.toggle('rotate');
     
     }
+    else{
+      subMenu1.style.display ="none";
+    }
+    }
     function connect(){
-      subMenu2.style.display = "block";
+      if(subMenu2.style.display === "none"){
+        subMenu2.style.display ="block";
+        subMenu.style.display = "none";
       subMenu1.style.display = "none";
-  subMenu.style.display = "none";
+      arrowBtn.classList.toggle('rotate');
+      darkBtn.classList.toggle('rotate');
       
       }
+      else{
+        subMenu2.style.display ="none";
+      }
+      
+      }
+    
